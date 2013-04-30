@@ -1,9 +1,9 @@
 Capybara.register_driver :smartphone do |app|
   driver = Capybara::Poltergeist::Driver.new(app, 
-    :window_size => [320,480],
-    :phantomjs_options => %w(--load-images=no --local-storage-quota=0 --proxy-type=none),
-    :inspector => true,
-    :js_errors => false
+    window_size: [320,480],
+    phantomjs_options: %w(--load-images=no --local-storage-quota=0 --proxy-type=none),
+    inspector: true,
+    js_errors: true
   )
   Helper::Driver.register(
     :smartphone,
@@ -15,10 +15,10 @@ end
 
 Capybara.register_driver :smartphone_landscape do |app|
   driver = Capybara::Poltergeist::Driver.new(app, 
-    :window_size => [480, 320],
-    :phantomjs_options => %w(--load-images=no --local-storage-quota=0 --proxy-type=none),
-    :inspector => true,
-    :js_errors => false
+    window_size: [480, 320],
+    phantomjs_options: %w(--load-images=no --local-storage-quota=0 --proxy-type=none),
+    inspector: true,
+    js_errors: true
   )
   Helper::Driver.register(
     :smartphone_landscape,

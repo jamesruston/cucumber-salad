@@ -3,8 +3,8 @@ module Helper
     def self.register(name, driver, useragent)
       @drivers ||= {}
       @drivers[name] = {
-        :driver => driver,
-        :useragent => useragent
+        driver: driver,
+        useragent: useragent
       }
     end
     

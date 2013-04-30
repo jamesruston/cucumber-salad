@@ -8,7 +8,7 @@ describe Helper::Flagpole do
   
   it 'should set a flagpole' do
     Helper::Flagpole.set('testpole', 'ON')
-    Helper::Cookie.all.first.should eql(['test-ZnAtdGVzdHBvbGU%3D', {:value => 'T04%3D', :options => {}}])
+    Helper::Cookie.all.first.should eql(['test-ZnAtdGVzdHBvbGU%3D', {value: 'T04%3D', options: {}}])
   end
   
 end

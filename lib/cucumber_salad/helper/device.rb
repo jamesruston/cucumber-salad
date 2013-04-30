@@ -13,10 +13,10 @@ module Helper
     
     def default_drivers
       {
-        :desktop => :firefox,
-        :tablet => :ipad,
-        :smartphone => :smartphone,
-        :feature_phone => :blackberry
+        desktop: :firefox,
+        tablet: :ipad,
+        smartphone: :smartphone,
+        feature_phone: :blackberry
       }
     end
     

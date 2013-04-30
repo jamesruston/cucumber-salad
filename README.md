@@ -43,7 +43,7 @@ The cookie API manages the cookie jars for the different drivers under a common 
 To add a cookie:
 
 ```ruby
-Helper::Cookie.add('cookie-key', 'cookie-value', :domain => 'bbc.co.uk')
+Helper::Cookie.add('cookie-key', 'cookie-value', domain: 'bbc.co.uk')
 ```
 
 Optional paramters can be passed to the add method, currently this is only the domain option.
@@ -76,9 +76,9 @@ To send a stub to redis/file system:
 
 ```ruby
 Helper::Stub.create_key('class_name', 'method_name')
-Helper::Stub.register(:content => {
-    :response => {
-      :some => 'json data'
+Helper::Stub.register(content: {
+    response: {
+      some: 'json data'
     }
   }
 )
@@ -88,8 +88,8 @@ Exceptions can be thrown if your library supports it:
 
 ```ruby
 Helper::Stub.create_key('class_name', 'method_name')
-Helper::Stub.register(:content => {
-    :exceptionType => "YOUR_EXCEPTION_CLASS"
+Helper::Stub.register(content: {
+    exceptionType: "YOUR_EXCEPTION_CLASS"
   }
 )
 ```

@@ -1,9 +1,9 @@
 Capybara.register_driver :blackberry do |app|
   driver = Capybara::Poltergeist::Driver.new(app, 
-    :window_size => [220,200],
-    :phantomjs_options => %w(--load-images=no --local-storage-quota=0 --proxy-type=none),
-    :inspector => true,
-    :js_errors => false
+    window_size: [220,200],
+    phantomjs_options: %w(--load-images=no --local-storage-quota=0 --proxy-type=none),
+    inspector: true,
+    js_errors: true
   )
   Helper::Driver.register(
     :blackberry,

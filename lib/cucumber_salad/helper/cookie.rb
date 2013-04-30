@@ -12,8 +12,8 @@ module Helper
     def self.add(key, value, options = {})
       self.init_cookies
       @cookies[key] = {
-        :value => value,
-        :options => options
+        value: value,
+        options: options
       }
     end
     
@@ -38,7 +38,7 @@ module Helper
           Capybara.current_session.driver.set_cookie(
             key,
             cookie[:value],
-            :domain => self.domain_for_cookie(cookie)
+            domain: self.domain_for_cookie(cookie)
           )
         end
       end

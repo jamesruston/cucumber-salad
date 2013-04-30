@@ -60,7 +60,7 @@ module Helper
     end
     
     def self.write_to_redis
-      @redis ||= Redis.new(:host => '176.34.255.217', :port => 6379)
+      @redis ||= Redis.new(host: '176.34.255.217', port: 6379)
       @redis.flushall
       @redis.pipelined do
         @stubs.each_pair do |key, value|
