@@ -6,7 +6,8 @@ module Helper
       if self.env == "sandbox"
        app_host << "sandbox.dev"
       else
-       app_host << "#{self.env}"
+        host_prefix = (prefix == 'pal') 'www' or 'm'
+        app_host << "#{host_prefix}.#{self.env}"
       end
       "#{app_host}.bbc.co.uk"
     end
