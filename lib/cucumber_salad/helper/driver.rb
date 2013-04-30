@@ -26,5 +26,12 @@ module Helper
         @drivers[driver]
       end
     end
+    
+    def self.phantomjs_extensions
+      extension_path = File.expand_path('../../../../src/phantomjs/extensions', __FILE__)
+      [
+        "#{extension_path}/geolocation.js"
+      ]
+    end
   end
 end

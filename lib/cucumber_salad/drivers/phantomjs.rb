@@ -2,7 +2,8 @@ Capybara.register_driver :phantomjs do |app|
   driver = Capybara::Poltergeist::Driver.new(app, 
     phantomjs_options: %w(--load-images=no --local-storage-quota=0 --proxy-type=none),
     inspector: true,
-    js_errors: true
+    js_errors: true,
+    extensions: Helper::Driver.phantomjs_extensions
   )
   Helper::Driver.register(
     :smartphone,
