@@ -29,6 +29,7 @@ module Helper
     
     def self.phantomjs_extensions
       extension_path = File.expand_path('../../../../src/phantomjs/extensions', __FILE__)
+      puts extension_path
       [
         "#{extension_path}/geolocation.js"
       ]
