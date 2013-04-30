@@ -4,7 +4,7 @@ Capybara.register_driver :safari do |app|
   )
   Helper::Driver.register(
     :smartphone,
-    :poltergeist
+    :selenium
   )
   driver
 end

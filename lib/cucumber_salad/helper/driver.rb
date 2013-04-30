@@ -1,6 +1,6 @@
 module Helper
   module Driver
-    def self.register(name, driver, useragent)
+    def self.register(name, driver, useragent = '')
       @drivers ||= {}
       @drivers[name] = {
         driver: driver,
@@ -16,7 +16,7 @@ module Helper
     end
     
     def self.init_driver(driver)
-      if driver[:driver] == :poltergeist
+      if driver[:driver] == :poltergeist and driver[:useragent]
         Capybara.current_session.driver.headers = {"User-Agent" => driver[:useragent]}
       end
     end
