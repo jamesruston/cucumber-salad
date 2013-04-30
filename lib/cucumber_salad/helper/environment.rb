@@ -2,9 +2,9 @@ module Helper
   module Environment
     
     def host(prefix = 'pal')
-      app_host = "http://#{prefix}."
+      app_host = "http://."
       if self.env == "sandbox"
-       app_host << "sandbox.dev"
+       app_host << "#{prefix}.sandbox.dev"
       else
         if prefix == 'pal'
           host_prefix = 'www'
